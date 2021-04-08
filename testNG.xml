@@ -1,8 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Suite1" verbose="1" parallel="methods" thread-count="2">
+
+<!--To execute Test cases in Parallel , need to use the term parallel="methods"-->
+<!--<suite name="Suite1" verbose="1" parallel="methods" thread-count="2">-->
+
+<!--To execute Test cases of different Classes in Parallel , need to use the term parallel="classes"-->
+<suite name="Suite1" verbose="1" parallel="classes" thread-count="2">
     <test name="test1" >
         <classes>
             <class name="testFirst" />
+            <class name="secondTest" />
         </classes>
     </test>
 </suite>
